@@ -1,0 +1,39 @@
+
+<section class="head-navbarmain container px-8" >
+  <nav class="flex justify-between items-center">
+    <div class="logo_img">
+      <img src="../../../assets/images/dummylogo-1.svg" alt="#">
+    </div>
+  <ul class="flex gap-4">
+      <li><a routerLink="/home" routerLinkActive="active-link">Home</a></li>
+      <li><a routerLink="/about">About</a></li>
+      <li><a routerLink="/service">Services</a></li>
+      <li><a routerLink="">Portfolio</a></li>
+  </ul>
+  <button (click)="showConatactModal()" class="btn">Contact</button>
+    </nav>
+</section>
+
+<div *ngIf="isopen" >
+
+<div class="contact-popupmain">
+  <div class="contact-popup">
+    <h3 class="text-2xl mb-4 text-center head_txt">Contact Me</h3>
+    <button class="close-btn" (click)="closePopup()"><i class="fa-regular fa-circle-xmark"></i></button>
+    <div class="flex flex-col gap-y-4">
+      <input type="text" placeholder="Full Name">
+      <input type="email" placeholder="Your Email">
+      <input type="number" placeholder="Mobile No">
+      <textarea placeholder="Message"></textarea>
+      <button class="submit-btn">Submit</button>
+    </div>
+
+  </div>
+</div>
+
+</div>
+
+
+
+
+
